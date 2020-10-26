@@ -24,10 +24,20 @@ body{
   right: 10px;
 }
 
+.hero-image-desktop{
+  display: none;
+}
+
+.desktop-box{
+  display: none;
+}
+
 h1{
-  margin-top: 0;
+  margin: 0;
+  position: relative;
   text-align: center;
   font-size: 2rem;
+  top:-50px;
 }
 
 .main-card{
@@ -63,9 +73,6 @@ h1{
   color: hsl(14, 88%, 65%);
 }
 
-.question:active{
-  font-weight: 700;
-}
 
 .down-arrow{
   align-self: center;
@@ -98,13 +105,74 @@ hr{
   bottom: 0;
   font-size: 11px;
   text-align: center;
+  z-index: -1;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
+
 @media only screen and (min-width: 1024px){
 
+  .main-card{
+    position: relative;
+    top: -100px;
+    width: 1000px;
+    height: 550px;
+    justify-content:center;
+    align-items: flex-end;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-position: -600px -290px;
+    overflow: hidden;
+  }
+
+  .hero-image{
+    display: none;
+  }
+
+  .hero-image-desktop{
+    display: block;
+    position: absolute;
+    left: -75px;
+  }
+
+  .desktop-box{
+    margin: 0;
+    display: block;
+    position: relative;
+    top: 315px;
+    left: -490px;
+    z-index: 1;
+    transition: 2s;
+  }
+
+  h1{
+    position: absolute;
+    top: 75px;
+    right: 395px;
+    font-size: 2.5rem;
+  }
+
+  .list{
+    position: relative;
+    bottom: -25px;
+    right: 100px;
+  }
+
+  .list-question{
+    width: 375px;
+    font-size: 1rem;
+  }
+
+  .answer{
+    width: 375px;
+    font-size: .8rem;
+  }
+
+  hr{
+    width: 375px;
+  }
 
 }
