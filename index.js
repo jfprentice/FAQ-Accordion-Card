@@ -8,7 +8,7 @@ let box = document.querySelector('.desktop-box');
 
 for (let i = 0; i < questions.length; i++) {
   questions.item(i).addEventListener('click', function() {
-    if (answers.item(i).style.display === 'none') {
+    if ((answers.item(i).style.display === 'none') || (answers.item(i).style.display === '')) {
       //transition back
       //only one answer open at a time
       for(let j=0; j < questions.length; j++){
